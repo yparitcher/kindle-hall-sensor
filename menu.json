@@ -1,0 +1,26 @@
+{
+	"comment001": "Hall Sensor",
+	"comment002": "www.github.com/yparitcher/kindle-hall-sensor",
+	"items": [
+	{
+		"name": "Disable Hall Sensor",
+		"exitmenu": false,
+		"date": false,
+		"checked": true,
+		"refresh": true,
+		"action": "./bin/hall_disable.sh",
+		"params": "0",
+		"if": "\"/sys/bus/platform/drivers/hall_sensor/rex_hall/hall_enable\" \"1\" -gg \"/sys/bus/platform/drivers/hall_sensor/zelda_hall/hall_enable\" \"1\" -gg \"/sys/bus/platform/drivers/hall_sensor/heisenberg_hall/hall_enable\" \"1\" -gg \"/sys/bus/platform/drivers/hall_sensor/duet_hall/hall_enable\" \"1\" -gg \"/sys/bus/platform/drivers/hall_sensor/wario_hall/hall_enable\" \"1\" -gg \"/sys/bus/platform/drivers/hall_sensor/yoshime_hall/hall_enable\" \"1\" -gg || || || || ||"
+	},
+	{
+		"name": "Enable Hall Sensor",
+		"exitmenu": false,
+		"date": false,
+		"checked": true,
+		"refresh": true,
+		"action": "./bin/hall_disable.sh",
+		"params": "1",
+		"if": "\"/sys/bus/platform/drivers/hall_sensor/rex_hall/hall_enable\" \"0\" -gg \"/sys/bus/platform/drivers/hall_sensor/zelda_hall/hall_enable\" \"0\" -gg \"/sys/bus/platform/drivers/hall_sensor/heisenberg_hall/hall_enable\" \"0\" -gg \"/sys/bus/platform/drivers/hall_sensor/duet_hall/hall_enable\" \"0\" -gg \"/sys/bus/platform/drivers/hall_sensor/wario_hall/hall_enable\" \"0\" -gg \"/sys/bus/platform/drivers/hall_sensor/yoshime_hall/hall_enable\" \"0\" -gg || || || || ||"
+	}
+	]
+}
