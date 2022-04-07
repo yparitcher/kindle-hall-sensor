@@ -1,6 +1,6 @@
 A KUAL plugin to disable the hall effect sensor (the magnetic sleep cover sensor)
 
-Tested on KT4 PW4 PW3
+Tested on KT4 PW4 PW3 PW5
 
 Should work on KOA KV KT3 KT2 PW2
 

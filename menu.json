@@ -9,6 +9,26 @@
 		"checked": true,
 		"refresh": true,
 		"action": "./bin/hall_disable.sh",
+		"params": "0 /sys/bus/platform/drivers/hall_sensor/eink_hall/hall_enable",
+		"if": "\"/sys/bus/platform/drivers/hall_sensor/eink_hall/hall_enable\" \"1\" -gg \"KindlePaperWhite5\" -m || &&"
+	},
+	{
+		"name": "Enable Hall Sensor",
+		"exitmenu": false,
+		"date": false,
+		"checked": true,
+		"refresh": true,
+		"action": "./bin/hall_disable.sh",
+		"params": "1 /sys/bus/platform/drivers/hall_sensor/eink_hall/hall_enable",
+		"if": "\"/sys/bus/platform/drivers/hall_sensor/eink_hall/hall_enable\" \"0\" -gg \"KindlePaperWhite5\" -m || &&"
+	},
+	{
+		"name": "Disable Hall Sensor",
+		"exitmenu": false,
+		"date": false,
+		"checked": true,
+		"refresh": true,
+		"action": "./bin/hall_disable.sh",
 		"params": "0 /sys/bus/platform/drivers/hall_sensor/rex_hall/hall_enable",
 		"if": "\"/sys/bus/platform/drivers/hall_sensor/rex_hall/hall_enable\" \"1\" -gg \"KindleBasic3\" -m \"KindlePaperWhite4\" -m || &&"
 	},
