@@ -9,8 +9,8 @@
 		"checked": true,
 		"refresh": true,
 		"action": "./bin/hall_disable.sh",
-		"params": "0 /sys/bus/platform/drivers/hall_sensor/eink_hall/hall_enable",
-		"if": "\"/sys/bus/platform/drivers/hall_sensor/eink_hall/hall_enable\" \"1\" -gg \"KindlePaperWhite5\" -m || &&"
+		"params": "0 /sys/bus/platform/devices/eink_hall/hall_enable",
+		"if": "\"/sys/bus/platform/devices/eink_hall/hall_enable\" \"1\" -gg \"KindlePaperWhite5\" -m &&"
 	},
 	{
 		"name": "Enable Hall Sensor",
@@ -19,8 +19,8 @@
 		"checked": true,
 		"refresh": true,
 		"action": "./bin/hall_disable.sh",
-		"params": "1 /sys/bus/platform/drivers/hall_sensor/eink_hall/hall_enable",
-		"if": "\"/sys/bus/platform/drivers/hall_sensor/eink_hall/hall_enable\" \"0\" -gg \"KindlePaperWhite5\" -m || &&"
+		"params": "1 /sys/bus/platform/devices/eink_hall/hall_enable",
+		"if": "\"/sys/bus/platform/devices/eink_hall/hall_enable\" \"0\" -gg \"KindlePaperWhite5\" -m &&"
 	},
 	{
 		"name": "Disable Hall Sensor",
